@@ -43,7 +43,6 @@ function showPicture(day){
        let divID = document.getElementById("day" + day);
        divID.style.backgroundImage = "url(" + kuvat[day - 1] + ")";
        divID.innerText = "";
-       
     }
     else{
         
@@ -52,7 +51,7 @@ function showPicture(day){
 
 function createDivs(amount, location){
     const calendarGrid = document.querySelector(location);
-    
+
     for (let i = 1; i <= amount; i++){
         const newDiv = document.createElement("div");
         newDiv.id = "day" + i;
