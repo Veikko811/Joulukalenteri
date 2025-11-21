@@ -4,7 +4,7 @@ const currentDay = date.getDate();
 createDivs(24, ".calendarGrid");
 
 function isCorrectDate(day){
-    if (currentMonth == 11 && currentDay >= day){
+    if (currentMonth == 12 && currentDay >= day){
         return true;
     }
     else{
