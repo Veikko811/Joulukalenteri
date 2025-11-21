@@ -37,6 +37,16 @@
   cursor: pointer;
 }
 
+.calendarGrid div:hover {
+  filter: brightness(1.2);
+  /* kirkastaa kuvaa */
+  transform: scale(1.05);
+  /* suurentaa hieman */
+  transition: 0.2s;
+  /* tekee muutoksesta pehmeän */
+}
+
+
 @keyframes shake {
   0% {
     transform: translate(0px, 0px);
