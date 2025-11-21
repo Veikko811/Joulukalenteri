@@ -19,20 +19,19 @@ function showPicture(day) {
         divID.innerText = "";
     }
     else {
+        let divID = document.getElementById("day" + day);
         divID.classList.add("shake");
 
-        // Poistetaan animaatioluokka hetken kuluttua, jotta se voi toistua
-        setTimeout(() => {
+        // Poistetaan animaatioluokka kun animaatio loppuu
+        divID.addEventListener("animationend", () => {
             divID.classList.remove("shake");
-        }, 500);
+        }, { once: true });
 
         // Soitetaan ääniefekti
-        const audio = new Audio("Kuvat/error.mp3"); // Lisää tiedosto kansioon
+        const audio = new Audio("Kuvat/error.mp3");
         audio.play();
-
-
-
     }
+
 }
 
 function createDivs(amount, location) {
