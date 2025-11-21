@@ -24,7 +24,7 @@ function showPicture(day){
 }
 
 function createDivs(amount, location){
-    const calendarGrid = document.querySelector(location);
+    let calendarGrid = document.querySelector(location);
 
     for (let i = 1; i <= amount; i++){
         let newDiv = document.createElement("div");
