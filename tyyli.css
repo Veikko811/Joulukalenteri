@@ -15,6 +15,31 @@
   background-position: 0 0, 10px 10px;
 }
 
+.koriste {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  /* Estää klikkaamisen */
+}
+
+.koriste.vasen {
+  left: 5%;
+}
+
+.koriste.oikea {
+  right: 5%;
+  transform: translateY(-50%) scaleX(-1);
+  /* Heijastus */
+}
+
+.koriste img {
+  width: 300px;
+  height: auto;
+  max-height: 90vh;
+  opacity: 0.8;
+}
 
 .mainHeading {
   color: rgb(255, 255, 255);
@@ -23,6 +48,8 @@
 }
 
 .calendarGrid {
+  position: relative;
+  z-index: 2;
   display: grid;
   width: 50vw;
   height: 50vh;
