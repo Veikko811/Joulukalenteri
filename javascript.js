@@ -1,7 +1,17 @@
 const date = new Date();
 const currentMonth = date.getMonth() + 1;
 const currentDay = date.getDate();
-createDivs(24, ".calendarGrid");
+
+function shuffledNumbers(n) {
+    const arr = Array.from({ length: n }, (_, i) => i + 1);
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+const numbers = shuffledNumbers(24);
 
 function isCorrectDate(day) {
     if (currentMonth == 12 && currentDay >= day) {
@@ -37,11 +47,14 @@ function showPicture(day) {
 function createDivs(amount, location) {
     let calendarGrid = document.querySelector(location);
 
-    for (let i = 1; i <= amount; i++) {
+    for (let i = 0; i < amount; i++) {
+     let num = numbers[i]; // shuffled number
+
         let newDiv = document.createElement("div");
-        newDiv.id = "day" + i;
-        newDiv.innerText = i;
-        newDiv.addEventListener("click", function () { showPicture(i); });
+        newDiv.id = "day" + num;  // ID käyttää shuffled number
+        newDiv.innerText = num;   // näyttää shuffled number
+        newDiv.addEventListener("click", () => showPicture(num));
         calendarGrid.appendChild(newDiv);
     }
 }
+createDivs(24, ".calendarGrid");
