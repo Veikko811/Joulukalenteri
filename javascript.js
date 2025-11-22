@@ -31,7 +31,7 @@ for (let i = 1; i <= 24; i++) {
     let num = numbers[i - 1]; // shuffled number
     let newDiv = document.createElement("div");
     newDiv.innerText = num;   // näyttää shuffled number
-    if (currentMonth == 11 && currentDay >= num){
+    if (currentMonth == 12 && currentDay >= num){
         newDiv.addEventListener("click", removeTopImage);
     }
     else{
