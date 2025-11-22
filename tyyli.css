@@ -3,10 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-
-.background {
   background-color: #b30000;
   background-image:
     radial-gradient(#990000 2px, transparent 2px),
@@ -71,6 +67,9 @@
   outline-style: solid;
   outline-width: 1px;
   font-size: calc(2vw + 2vh);
+  color:white;
+  font-weight: bold;
+  -webkit-text-stroke: 2px black;
   cursor: pointer;
 }
 
@@ -82,15 +81,6 @@
   transition: 0.2s;
   /* tekee muutoksesta pehmeän */
 }
-
-.calendarGrid div {
-  color:white;
-  /*vaihtaa numeron väriä*/ 
-  font-weight: bold;
-  -webkit-text-stroke: 2px black;
-}
-
-
 
 @keyframes shake {
   0% {
@@ -112,8 +102,4 @@
   100% {
     transform: translate(0px, 0px);
   }
-}
-
-.shake {
-  animation: shake 0.5s;
 }
