@@ -51,7 +51,7 @@
   height: 50vh;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  background-image: url(Kuvat/ai-generated-8438100_1920.jpg);
+  background-image: url(Kuvat/Grid-taustakuva.jpg);
   background-size: cover;
   background-position: center;
   outline-width: 1px;

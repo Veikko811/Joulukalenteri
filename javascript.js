@@ -1,7 +1,7 @@
 const date = new Date();
 const currentMonth = date.getMonth() + 1;
 const currentDay = date.getDate();
-const audio = new Audio("Kuvat/error.mp3");
+const audio = new Audio("Ääni/error.mp3");
 
 function shuffledNumbers() {
     const arr = Array.from({ length: 24 }, (_, i) => i + 1);
